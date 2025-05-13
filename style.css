@@ -1,0 +1,1983 @@
+/* Reset dan pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(52, 152, 219, 0.7)),
+                url('background.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ffeb3b;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-text {
+    color: #ffeb3b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Navigasi */
+.navbar {
+    background-color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #2980b9;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(52, 152, 219, 0.7)),
+                url('background.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease 0.2s;
+    animation-fill-mode: both;
+}
+
+.welcome-text {
+    color: #ffeb3b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease 0.4s;
+    animation-fill-mode: both;
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    animation: fadeInDown 1s ease 0.6s;
+    animation-fill-mode: both;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.next-button:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-5px);
+    }
+    60% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .welcome-text {
+        font-size: 1.2rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.about-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(52, 152, 219, 0.7)),
+                url('beach-background.jpg') center/cover;
+    padding: 2rem 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.profile-image {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-tag {
+    background-color: #3498db;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.profile-tag h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-content {
+    color: white;
+    max-width: 800px;
+}
+
+.bio-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 350px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 300px;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+    }
+}
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Pengaturan dasar body */
+body {
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #2980b9;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Container Utama */
+.portfolio-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('ocean-bg.jpg') center/cover;
+    padding: 2rem 5%;
+    color: white;
+    position: relative;
+}
+
+/* Bagian Info */
+.info-cards {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.info-card h2 {
+    color: #ffeb3b;
+    margin-bottom: 1rem;
+}
+
+/* Bagian TPI Lappa */
+.tpi-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.tpi-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.tpi-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Tombol Next */
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        padding: 1rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.portfolio-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('ocean-bg.jpg') center/cover;
+    padding: 2rem 5%;
+    color: white;
+    position: relative;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.left-content, .right-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    color: #333;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.profile-info {
+    margin-bottom: 2rem;
+}
+
+.profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.business-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.business-item {
+    margin-bottom: 1rem;
+}
+
+.business-item h4 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.vision-mission h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.vision, .mission {
+    margin-bottom: 1.5rem;
+}
+
+.tpi-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 2rem 0;
+    text-align: center;
+    color: #333;
+}
+
+.tpi-image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.tpi-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.tpi-image h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: yellow;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.caption {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.portfolio-description {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .left-content, .right-content {
+        width: 100%;
+    }
+}
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+/* Container Blog */
+.blog-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('fish-bg.jpg') center/cover;
+    padding: 2rem 5%;
+    position: relative;
+}
+
+/* Header Blog */
+.blog-header {
+    text-align: center;
+    color: white;
+    background-color: #3498db;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.blog-header h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* Grid Blog */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.pagination a, .pagination span {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.pagination a.active {
+    background-color: #3498db;
+}
+
+/* Tombol Next */
+.next-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .blog-header h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+/* Container Contact */
+.contact-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('images/download.jpg') center/cover;
+    padding: 2rem 5%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Profil Section */
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ffeb3b;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-item h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.social-item p {
+    color: #ffeb3b;
+}
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+/* Container Contact */
+.contact-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('sunset-bg.jpg') center/cover;
+    padding: 2rem 5%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Profil Section */
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ffeb3b;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-item h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.social-item p {
+    color: #ffeb3b;
+}
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.contact-container {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('sunset.jpg') center/cover;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-section h1 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: #ffeb3b;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-item h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.social-item p {
+    color: #ffeb3b;
+    font-size: 1rem;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #3498db;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .social-grid {
+        gap: 2rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-grid {
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ... existing code ... */
+
+.contact-container {
+    min-height: calc(100vh - 70px);
+    background: #808080;  /* Menggunakan warna abu-abu sesuai gambar */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;  /* Menambah jarak dari atas */
+    margin-bottom: 50px;  /* Menambah jarak ke bawah */
+}
+
+.profile-circle {
+    width: 250px;  /* Memperbesar ukuran lingkaran */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;  /* Border putih */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-section h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+h2.contact-title {
+    color: #ffeb3b;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.social-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;  /* Memperbesar jarak antar icon */
+    margin-top: 30px;
+}
+
+/* ... existing code ... */
+
+.social-item p {
+    color: #ffeb3b;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 2rem 0;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+}
+
+.social-circle i {
+    font-size: 40px;
+    color: #333;
+}
+
+/* Warna khusus untuk setiap icon */
+.fa-whatsapp {
+    color: #25D366;
+}
+
+.fa-instagram {
+    color: #E4405F;
+}
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+.fa-envelope {
+    color: #EA4335;
+}
+
+.fa-facebook-f {
+    color: #1877F2;
+}
+
+.social-item h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.social-item p {
+    color: #ffeb3b;
+    font-size: 1rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 2rem;
+    }
+
+    .social-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-circle i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+/* ... existing code ... */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Menetapkan lebar yang sama untuk semua item */
+}
+
+.social-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-item h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.social-item p {
+    color: #ffeb3b;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    word-break: break-word; /* Untuk email yang panjang */
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 2rem;
+    }
+    
+    .social-item {
+        width: 150px; /* Mengurangi lebar pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-item {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #3498db;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.about-container {
+    min-height: calc(100vh - 70px);
+    padding: 4rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    background-color: #3498db;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.profile-info h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info .title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    color: white;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 2rem 5%;
+    }
+
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-content {
+        font-size: 0.9rem;
+    }
+}
+
+/* ... existing code ... */
+
+/* Menambahkan style untuk tombol Next */
+.next-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background: #2980b9;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* ... existing code ... */
+    
+    .next-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #3498db;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+.about-container {
+    min-height: calc(100vh - 70px);
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-circle {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-tag {
+    background-color: #3498db;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.name-tag h1 {
+    margin-bottom: 0.5rem;
+}
+
+.about-content {
+    max-width: 800px;
+    color: white;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content {
+        font-size: 0.9rem;
+    }
+}
+/* ... existing code ... */
+
+/* Menambahkan style untuk tombol Next */
+.next-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background: #2980b9;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* ... existing code ... */
+    
+    .next-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
